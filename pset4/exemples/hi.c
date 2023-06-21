@@ -7,6 +7,7 @@
     printf("%s\n", s);
 }*/
 
+// Pointer arithmetic
 int main(void)
 {
     char *s = "HI!";
