@@ -1,14 +1,14 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int main(void)
+int EX1(void)
 {
     string s = "HI!";
     printf("%s\n", s);
 }
 
 // Pointer arithmetic
-int main(void)
+int EX2(void)
 {
     char *s = "HI!";
     printf("%c\n", s[0]);
