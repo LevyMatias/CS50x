@@ -13,9 +13,9 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
             int avg = round((pixel.rgbtRed + pixel.rgbtGreen + pixel.rgbtBlue) / 3.0);
 
             // Define o valor médio como o novo valor para cada componente de cor RGB
-            pixel.rgbtRed = avg;
-            pixel.rgbtGreen = avg;
-            pixel.rgbtBlue = avg;
+            image[i][j].rgbtRed = avg;
+            image[i][j].rgbtGreen = avg;
+            image[i][j].rgbtBlue = avg;
         }
     }
     return;
