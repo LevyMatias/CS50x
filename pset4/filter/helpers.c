@@ -30,8 +30,8 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
         {
             // Troca os pixels entre as colunas da esquerda e direita
             RGBTRIPLE temp = image[i][j];
-            image[i][j] = image[i][width - 1 - j];
-            image[i][width - 1 - j] = temp;
+            image[i][j] = image[i][height - 1 - j];
+            image[i][height - 1 - j] = temp;
         }
     }
     return;
