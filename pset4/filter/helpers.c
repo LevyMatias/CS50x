@@ -40,7 +40,42 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
-    return;
+    // cópia temporária da imagem original
+    RGBTRIPLE temp[height][width];
+    memcpy(temp, image, sizeof(RGBTRIPLE) * height * width);
+
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            int count = 0;
+            int sumRed = 0, sumGreen = 0, sumBlue = 0;
+
+            // Percorre a vizinhança de cada pixel
+            for (int di = -1; di <= 1; di++)
+            {
+                for (int dj = -1; dj <= 1; dj++)
+                {
+                    int ni = i + di;
+                    int nj = j + dj;
+
+                    // Verifica se o pixel vizinho está dentro dos limites da imagem
+                    if (ni >= 0 && ni < height && nj >= 0 && nj < width)
+                    {
+                        sumRed += temp[ni][nj].rgbtRed;
+                        sumGreen += temp[ni][nj].rgbtGreen;
+                        sumBlue += temp[ni][nj].rgbtBlue;
+                        count++;
+                    }
+                }
+            }
+
+            // Calcula a média dos valores dos pixels vizinhos
+            image[i][j].rgbtRed = round((float)sumRed / count);
+            image[i][j].rgbtGreen = round((float)sumGreen / count);
+            image[i][j].rgbtBlue = round((float)sumBlue / count);
+        }
+    }
 }
 
 // Detect edges
