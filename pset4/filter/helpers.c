@@ -40,7 +40,6 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
-    // cópia temporária da imagem original
     RGBTRIPLE temp[height][width];
     memcpy(temp, image, sizeof(RGBTRIPLE) * height * width);
 
@@ -51,7 +50,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             int count = 0;
             int sumRed = 0, sumGreen = 0, sumBlue = 0;
 
-            // Percorre a vizinhança de cada pixel
             for (int di = -1; di <= 1; di++)
             {
                 for (int dj = -1; dj <= 1; dj++)
@@ -70,7 +68,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 }
             }
 
-            // Calcula a média dos valores dos pixels vizinhos
             image[i][j].rgbtRed = round((float)sumRed / count);
             image[i][j].rgbtGreen = round((float)sumGreen / count);
             image[i][j].rgbtBlue = round((float)sumBlue / count);
