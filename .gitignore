@@ -1,0 +1,6 @@
+# Ignore .devcontainer.json and .vscode in the root directory
+.devcontainer.json
+.vscode
+
+# Ignore the .c9/libevent-2.1.8-stable directory inside .ssh/ubuntu/
+.ssh/ubuntu/.c9/libevent-2.1.8-stable/
