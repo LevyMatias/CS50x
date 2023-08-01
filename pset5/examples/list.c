@@ -41,7 +41,7 @@ int main(void)
     // Free list
     free(list);
     return 0;
-
+}
 /*int main(void)
 {
     int list[3];
