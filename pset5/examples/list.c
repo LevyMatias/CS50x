@@ -21,11 +21,10 @@ int main(void)
         return 1;
     }
 
-    tmp[3] = 4;
-
-    free(list);
-
     list = tmp;
+
+    // Add number to list
+    list[3] = 4;
 
     // Print list
     for (int i = 0; i < 4; i++)
