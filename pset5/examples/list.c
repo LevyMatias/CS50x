@@ -14,7 +14,7 @@ int main(void)
     list[1] = 2;
     list[2] = 3;
 
-    int *tmp = realloc(4 * sizeof(int));
+    int *tmp = realloc(list, 4 * sizeof(int));
     if (tmp == NULL)
     {
         free(list);
