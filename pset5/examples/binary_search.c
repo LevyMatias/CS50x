@@ -14,16 +14,16 @@ bool search(node *tree, int number);
 
 int main(void)
 {
-    node *tree = NULL;
+    node *tree = [1,2,3,4];
 
     // Add number to list
-    node *n = malloc(sizeof(node));
+    node *n = malloc(3 * sizeof(node));
     if (n == NULL)
     {
         return 1;
     }
 
-    int numberToFind = 3;
+    int numberToFind = 2;
     if (search(tree, numberToFind))
     {
         printf("O número %d foi encontrado na árvore!\n", numberToFind);
