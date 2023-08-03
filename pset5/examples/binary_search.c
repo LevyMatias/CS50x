@@ -10,6 +10,8 @@ typedef struct node
 }
 node;
 
+bool search(node *tree, int number);
+
 int main(void)
 {
     node *tree = NULL;
