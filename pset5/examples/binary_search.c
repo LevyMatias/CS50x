@@ -10,6 +10,7 @@ typedef struct node
 }
 node;
 
+void print_tree(node *root);
 void free_tree(node *root);
 bool search(node *tree, int number);
 
@@ -62,9 +63,22 @@ int main(void)
         printf("O número %d não foi encontrado na árvore.\n", numberToFind);
     }
 
+    print_tree(tree);
+
     // Free tree
     free_tree(tree);
     return 0;
+}
+
+void print_tree(node *root)
+{
+    if (root == NULL)
+    {
+        return;
+    }
+    print_tree(root->left);
+    printf("%i\n", root->number);
+    print_tree(root->right);
 }
 
 void free_tree(node *root)
