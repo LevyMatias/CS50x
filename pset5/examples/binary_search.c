@@ -18,7 +18,7 @@ int main(void)
 {
     node *tree = NULL;
 
-    // Add number to list
+    // Creating the binary tree manually
     node *n = malloc(sizeof(node));
     if (n == NULL)
     {
@@ -29,7 +29,7 @@ int main(void)
     n->right = NULL;
     tree = n;
 
-    // Add number to list
+    // Add another number to list
     n = malloc(sizeof(node));
     if (n == NULL)
     {
@@ -41,7 +41,7 @@ int main(void)
     n->right = NULL;
     tree->left = n;
 
-    // Add number to list
+    // Add another number to list
     n = malloc(sizeof(node));
     if (n == NULL)
     {
