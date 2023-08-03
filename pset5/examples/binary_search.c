@@ -4,86 +4,20 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-// Represents a node
-typedef struct node
-{
-    int number;
-    struct node *left;
-    struct node *right;
-}
-node;
-
-void free_tree(node *root);
-void print_tree(node *root);
-
 int main(void)
 {
-    // Tree of size 0
-    node *tree = NULL;
 
-    // Add number to list
-    node *n = malloc(sizeof(node));
-    if (n == NULL)
+    int numberToFind = 3;
+    if (search(tree, numberToFind))
     {
-        return 1;
+        printf("O número %d foi encontrado na árvore!\n", numberToFind);
     }
-    n->number = 2;
-    n->left = NULL;
-    n->right = NULL;
-    tree = n;
-
-    // Add number to list
-    n = malloc(sizeof(node));
-    if (n == NULL)
+    else
     {
-        free_tree(tree);
-        return 1;
+        printf("O número %d não foi encontrado na árvore.\n", numberToFind);
     }
-    n->number = 1;
-    n->left = NULL;
-    n->right = NULL;
-    tree->left = n;
 
-    // Add number to list
-    n = malloc(sizeof(node));
-    if (n == NULL)
-    {
-        free_tree(tree);
-        return 1;
-    }
-    n->number = 3;
-    n->left = NULL;
-    n->right = NULL;
-    tree->right = n;
-
-    // Print tree
-    print_tree(tree);
-
-    // Free tree
-    free_tree(tree);
     return 0;
-}
-
-void free_tree(node *root)
-{
-    if (root == NULL)
-    {
-        return;
-    }
-    free_tree(root->left);
-    free_tree(root->right);
-    free(root);
-}
-
-void print_tree(node *root)
-{
-    if (root == NULL)
-    {
-        return;
-    }
-    print_tree(root->left);
-    printf("%i\n", root->number);
-    print_tree(root->right);
 }
 
 bool search(node *tree, int number)
