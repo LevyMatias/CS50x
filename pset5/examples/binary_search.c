@@ -65,7 +65,6 @@ int main(void)
 
     print_tree(tree);
 
-    // Free tree
     free_tree(tree);
     return 0;
 }
