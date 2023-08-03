@@ -2,6 +2,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 // Represents a node
 typedef struct node
@@ -85,7 +86,6 @@ void print_tree(node *root)
     print_tree(root->right);
 }
 
-typedef int bool;
 bool search(node *tree, int number)
 {
     if (tree == NULL)
