@@ -106,11 +106,8 @@ bool search(node *tree, int number)
     {
         return search(tree->right, number);
     }
-    else if (number == tree->number)
+    else
     {
         return true;
-    }
-    else {
-        return false;
     }
 }
