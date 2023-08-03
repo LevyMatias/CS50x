@@ -85,6 +85,7 @@ void print_tree(node *root)
     print_tree(root->right);
 }
 
+typedef int bool;
 bool search(node *tree, int number)
 {
     if (tree == NULL)
