@@ -104,4 +104,7 @@ bool search(node *tree, int number)
     {
         return true;
     }
+    else {
+        return false;
+    }
 }
