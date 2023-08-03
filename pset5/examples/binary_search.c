@@ -14,25 +14,48 @@ bool search(node *tree, int number);
 
 int main(void)
 {
-    node *tree = [1,2,3,4];
+    node *tree = NULL;
 
     // Add number to list
-    node *n = malloc(3 * sizeof(node));
+    node *n = malloc(sizeof(node));
     if (n == NULL)
     {
         return 1;
     }
+    n->number = 2;
+    n->left = NULL;
+    n->right = NULL;
+    tree = n;
 
-    int numberToFind = 2;
-    if (search(tree, numberToFind))
+    // Add number to list
+    n = malloc(sizeof(node));
+    if (n == NULL)
     {
-        printf("O número %d foi encontrado na árvore!\n", numberToFind);
+        free_tree(tree);
+        return 1;
     }
-    else
-    {
-        printf("O número %d não foi encontrado na árvore.\n", numberToFind);
-    }
+    n->number = 1;
+    n->left = NULL;
+    n->right = NULL;
+    tree->left = n;
 
+    // Add number to list
+    n = malloc(sizeof(node));
+    if (n == NULL)
+    {
+        free_tree(tree);
+        return 1;
+    }
+    n->number = 3;
+    n->left = NULL;
+    n->right = NULL;
+    tree->right = n;
+
+    // Print tree
+    print_tree(tree);
+
+    // Free tree
+    free_tree(tree);
     return 0;
 }
 
