@@ -52,9 +52,6 @@ int main(void)
     n->right = NULL;
     tree->right = n;
 
-    // Print tree
-    print_tree(tree);
-
     // Free tree
     free_tree(tree);
     return 0;
