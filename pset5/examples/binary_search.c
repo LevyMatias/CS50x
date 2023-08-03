@@ -4,8 +4,22 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
+typedef struct node
+{
+    int number;
+}
+node;
+
 int main(void)
 {
+    node *tree = NULL;
+
+    // Add number to list
+    node *n = malloc(sizeof(node));
+    if (n == NULL)
+    {
+        return 1;
+    }
 
     int numberToFind = 3;
     if (search(tree, numberToFind))
