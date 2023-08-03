@@ -52,6 +52,16 @@ int main(void)
     n->right = NULL;
     tree->right = n;
 
+    int numberToFind = 1;
+    if (search(tree, numberToFind))
+    {
+        printf("O número %d foi encontrado na árvore!\n", numberToFind);
+    }
+    else
+    {
+        printf("O número %d não foi encontrado na árvore.\n", numberToFind);
+    }
+
     // Free tree
     free_tree(tree);
     return 0;
