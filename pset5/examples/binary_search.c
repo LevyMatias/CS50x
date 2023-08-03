@@ -10,6 +10,7 @@ typedef struct node
 }
 node;
 
+void free_tree(node *root);
 bool search(node *tree, int number);
 
 int main(void)
@@ -57,6 +58,17 @@ int main(void)
     // Free tree
     free_tree(tree);
     return 0;
+}
+
+void free_tree(node *root)
+{
+    if (root == NULL)
+    {
+        return;
+    }
+    free_tree(root->left);
+    free_tree(root->right);
+    free(root);
 }
 
 bool search(node *tree, int number)
