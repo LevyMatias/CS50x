@@ -17,6 +17,7 @@ bool search(node *tree, int number);
 int main(void)
 {
     node *tree = NULL;
+    int numberToFind = 2;
 
     // Creating the binary tree manually
     node *n = malloc(sizeof(node));
@@ -53,7 +54,6 @@ int main(void)
     n->right = NULL;
     tree->right = n;
 
-    int numberToFind = 1;
     if (search(tree, numberToFind))
     {
         printf("O número %d foi encontrado na árvore!\n", numberToFind);
