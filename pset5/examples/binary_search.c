@@ -1,5 +1,3 @@
-// Implements a list of numbers as a binary search tree
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
@@ -7,6 +5,8 @@
 typedef struct node
 {
     int number;
+    struct node *left;
+    struct node *right;
 }
 node;
 
