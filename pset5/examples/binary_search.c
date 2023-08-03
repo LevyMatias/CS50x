@@ -4,7 +4,6 @@
 
 typedef struct node
 {
-    int number;
     struct node *left;
     struct node *right;
 }
