@@ -45,7 +45,7 @@ bool load(const char *dictionary)
     // Initialize hash table
     for (int i = 0; i < HASH_TABLE_SIZE; i++)
     {
-        hash_table[i] = NULL;
+        table[i] = NULL;
     }
 
     // Read words from dictionary and insert into hash table
