@@ -67,8 +67,8 @@ bool load(const char *dictionary)
         int index = hash(word);
 
         // Insert the new node at the beginning of the linked list at the index
-        new_node->next = hash_table[index];
-        hash_table[index] = new_node;
+        new_node->next = table[index];
+        table[index] = new_node;
     }
 
     fclose(file);
