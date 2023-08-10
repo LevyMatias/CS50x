@@ -33,7 +33,7 @@ unsigned int hash(const char *word)
     {
         sum += word[i];
     }
-    return sum % HASH_TABLE_SIZE;
+    return sum % N;
 }
 
 
@@ -48,7 +48,7 @@ bool load(const char *dictionary)
     }
 
     // Initialize hash table
-    for (int i = 0; i < HASH_TABLE_SIZE; i++)
+    for (int i = 0; i < N; i++)
     {
         table[i] = NULL;
     }
