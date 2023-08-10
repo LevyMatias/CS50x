@@ -28,7 +28,9 @@ bool check(const char *word)
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
-    // TODO
+    for(int i = 0; i< strlen(word); i++) {
+        
+    }
     return 0;
 }
 
