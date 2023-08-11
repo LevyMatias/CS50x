@@ -67,6 +67,7 @@ bool load(const char *dictionary)
 
     // Read words from dictionary and insert into hash table
     char word[LENGTH + 1];
+    unsigned int word_count = 0;
     while (fscanf(file, "%s", word) != EOF)
     {
         // Create a new node for the word
@@ -86,6 +87,8 @@ bool load(const char *dictionary)
         // Insert the new node at the beginning of the linked list at the index
         new_node->next = table[index];
         table[index] = new_node;
+
+        word_count++;
     }
 
     fclose(file);
