@@ -33,7 +33,7 @@ bool check(const char *word)
         }
         cursor = cursor->next;
     }
-    
+
     return false;
 }
 
@@ -41,7 +41,7 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     unsigned int sum = 0;
-    for (int i = 0; word[i] != '\0'; i++)
+    for (int i = 0; strlen(word[i]) != '\0'; i++)
     {
         sum += tolower(word[i]);
     }
