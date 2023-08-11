@@ -17,13 +17,12 @@ typedef struct node
 }
 node;
 
-int word_count = 0;
-
 // Number of buckets in hash table
-const unsigned int N = 65536;
+const unsigned int N = 20000;
 
 // Hash table
 node *table[N];
+int word_count = 0;
 
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
