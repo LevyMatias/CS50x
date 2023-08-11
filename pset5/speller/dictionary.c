@@ -96,11 +96,19 @@ bool load(const char *dictionary)
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
-    // Check if there are any words
-    if (load > 0) {
-        return load;
+    // Initialize a counter
+    unsigned int word_count = 0;
+
+    // Iterate through buckets
+    for (int i = 0; i < N; i++) {
+        node *cursor = table[i];
+        while (cursor) {
+            word_count++;
+            cursor = cursor->next;
+        }
     }
-    return 0;
+
+    return word_count;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
