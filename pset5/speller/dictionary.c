@@ -44,7 +44,7 @@ unsigned int hash(const char *word)
     {
         sum += tolower(word[i]);
     }
-    return sum % N;
+    return sum % HASHTABLE_SIZE;
 }
 
 
@@ -59,7 +59,7 @@ bool load(const char *dictionary)
     }
 
     // Initialize hash table
-    for (int i = 0; i < N; i++)
+    for (int i = 0; i < HASHTABLE_SIZE; i++)
     {
         table[i] = NULL;
     }
@@ -112,4 +112,5 @@ bool unload(void)
             free(tmp);
         }
     return true;
+    }
 }
