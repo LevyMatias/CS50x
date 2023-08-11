@@ -20,7 +20,7 @@ node;
 int word_count = 0;
 
 // Number of buckets in hash table
-const unsigned int N = (LENGTH+1) * 'z';
+const unsigned int N = 65536;
 
 // Hash table
 node *table[N];
