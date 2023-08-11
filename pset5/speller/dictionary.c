@@ -111,6 +111,7 @@ bool unload(void)
             cursor = cursor->next;
             free(tmp);
         }
-    return true;
+
     }
+    return true;
 }
