@@ -33,6 +33,7 @@ bool check(const char *word)
         }
         cursor = cursor->next;
     }
+    
     return false;
 }
 
