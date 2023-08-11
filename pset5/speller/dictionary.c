@@ -97,8 +97,8 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // Check if there are any words
-    if (word_count > 0) {
-        return word_count;
+    if (word > 0) {
+        return word;
     }
     return 0;
 }
