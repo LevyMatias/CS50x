@@ -6,8 +6,9 @@
 #include <stdlib.h>
 #include <string.h>
 #include <strings.h>
-
 #include "dictionary.h"
+
+#define HASHTABLE_SIZE 10000
 
 // Represents a node in a hash table
 typedef struct node
@@ -17,11 +18,8 @@ typedef struct node
 }
 node;
 
-// Number of buckets in hash table
-const unsigned int N = 187751;
-
 // Hash table
-node *table[N];
+node *table[HASHTABLE_SIZE];
 int word_count = 0;
 
 // Returns true if word is in dictionary, else false
