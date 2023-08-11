@@ -43,7 +43,7 @@ unsigned int hash(const char *word)
     unsigned int sum = 0;
     for (int i = 0; word[i] != '\0'; i++)
     {
-        sum += toLower(word[i]);
+        sum += tolower(word[i]);
     }
     return sum % N;
 }
@@ -97,8 +97,8 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // Check if there are any words
-    if (word > 0) {
-        return word;
+    if (load > 0) {
+        return load;
     }
     return 0;
 }
