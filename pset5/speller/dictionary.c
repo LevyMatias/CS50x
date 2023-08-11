@@ -103,6 +103,17 @@ unsigned int size(void)
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
-    // TODO
+    // Iterate through buckets
+    for (int i = 0; i < N; i++) {
+        node *cursor = table[i];
+        while (cursor) {
+            node *tmp = cursor;
+            cursor = cursor->next;
+            free(tmp);
+        }
+        if (i == N - 1 && cursor == NULL) {
+            return true;
+        }
+    }
     return false;
 }
