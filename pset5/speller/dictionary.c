@@ -104,16 +104,12 @@ unsigned int size(void)
 bool unload(void)
 {
     // Iterate through buckets
-    for (int i = 0; i < N; i++) {
+    for (int i = 0; i < HASHTABLE_SIZE; i++) {
         node *cursor = table[i];
         while (cursor) {
             node *tmp = cursor;
             cursor = cursor->next;
             free(tmp);
         }
-        if (i == N - 1 && cursor == NULL) {
-            return true;
-        }
-    }
-    return false;
+    return true;
 }
