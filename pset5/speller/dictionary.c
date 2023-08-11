@@ -22,6 +22,7 @@ const unsigned int N = 1;
 
 // Hash table
 node *table[N];
+unsigned int word_count = 0;
 
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
@@ -67,7 +68,6 @@ bool load(const char *dictionary)
 
     // Read words from dictionary and insert into hash table
     char word[LENGTH + 1];
-    unsigned int word_count = 0;
     while (fscanf(file, "%s", word) != EOF)
     {
         // Create a new node for the word
@@ -99,18 +99,6 @@ bool load(const char *dictionary)
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
-    // Initialize a counter
-    unsigned int word_count = 0;
-
-    // Iterate through buckets
-    for (int i = 0; i < N; i++) {
-        node *cursor = table[i];
-        while (cursor) {
-            word_count++;
-            cursor = cursor->next;
-        }
-    }
-
     return word_count;
 }
 
