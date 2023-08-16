@@ -6,3 +6,4 @@ def load(dict):
         words.add(line.rstrip())
     file.close()
     return True
+
