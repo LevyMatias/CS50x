@@ -6,3 +6,15 @@ def load(dict):
         words.add(line.rstrip())
     file.close()
     return True
+
+def check(word):
+    if word.lower() in words:
+        return True
+    else:
+        return False
+
+def size():
+    return len(words)
+
+def unload():
+    return True
