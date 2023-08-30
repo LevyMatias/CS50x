@@ -11,7 +11,6 @@ def main():
     if height > 8 or height == 0:
         while True:
             height = get_int("Height: ")
-            break
     print_pyramid(height)
 
 main()
