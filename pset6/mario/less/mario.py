@@ -11,7 +11,6 @@ def main():
         height = get_int("Height: ")
         if height <= 8 and height != 0:
             break  # Sai do loop se a entrada for válida
-        else:
-            print_pyramid(height)
+    print_pyramid(height)
 
 main()
