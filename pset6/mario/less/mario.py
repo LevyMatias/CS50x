@@ -8,6 +8,8 @@ def print_pyramid(height):
         print(spaces + hashes, "\n")
 
 # main function
+
+
 def main():
     while True:
         height = get_int("Height: ")
