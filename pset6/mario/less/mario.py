@@ -4,7 +4,7 @@ n = get_int("Height: ")
 
 if n <= 8 and n != 0:
     for i in range(n):
-        for j in range(8):
+        for j in range(n):
             print("#", end="")
         print()
 else:
@@ -12,7 +12,7 @@ else:
         n = get_int("Height: ")
         if n <= 8 and n != 0:
             for i in range(n):
-                for j in range(8):
+                for j in range(n):
                     print("#", end="")
                 print()
             break  # Saia do loop após a entrada correta
