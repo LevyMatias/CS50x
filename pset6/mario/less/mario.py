@@ -6,10 +6,10 @@ def print_pyramid(height):
         hashes = "#" * (i + 1)
         print(spaces + hashes)
 
-n = get_int("Height: ")
-if n <= 8 and n != 0:
+height = get_int("Height: ")
+if height <= 8 and height != 0:
     while True:
-        height = int(get_int("Height: "))  # Solicita a altura da pirâmide ao usuário
+        height = get_int("Height: ")  # Solicita a altura da pirâmide ao usuário
         break
 
 print_pyramid(height)
