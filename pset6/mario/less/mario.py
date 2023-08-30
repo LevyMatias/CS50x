@@ -7,12 +7,11 @@ def print_pyramid(height):
         print(spaces + hashes)
 
 def main():
-    height = get_int("Height: ")
-    if height <= 8 or height != 0:
-        print_pyramid(height)
-    else:
-        while True:
-            if height > 8 or height == 0:
-                height = get_int("Height: ")
+    while True:
+        height = get_int("Height: ")
+        if height <= 8 and != 0:
+            break  # Sai do loop se a entrada for válida
+        else:
+            print_pyramid(height)
 
 main()
