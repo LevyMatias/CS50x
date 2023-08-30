@@ -9,10 +9,8 @@ def print_pyramid(height):
 def main():
     while True:
         height = get_int("Height: ")
-        if height > 8 and height <= 0:
-            height = get_int("Height: ")
-        else:
-            print_pyramid(height)
+        if height <= 8 and height != 0:
             break  # Sai do loop se a entrada for válida
+    print_pyramid(height)
 
 main()
