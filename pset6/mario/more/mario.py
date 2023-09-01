@@ -2,18 +2,12 @@
 from cs50 import get_int
 
 # main function
-def print_pyramid(height):
+
+def inverted_pyramid(height):
     for i in range(height):
         spaces = " " * (height - i - 1)
         hashes = "#" * (i + 1)
-        print(spaces + hashes)
-
-def print_inverted_pyramid(height):
-    for i in range(height):
-        spaces = " " * (height - i - 1)
-        hashes = "#" * (i + 1)
-        print(spaces + hashes + " " + hashes)
-
+        print(spaces + hashes + " " + hashes
 
 def main():
     while True:
@@ -21,6 +15,6 @@ def main():
         if height <= 8 and not height <= 0:
             break  # Sai do loop se a entrada for válida
     print_pyramid(height)
-    print_inverted_pyramid(height)
+    inverted_pyramid(height)
 
 main()
