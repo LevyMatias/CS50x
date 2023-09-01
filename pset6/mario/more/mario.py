@@ -1,4 +1,6 @@
 # Exercício 2: Mario(versão desafiadora)
+from cs50 import get_int
+
 # main function
 def print_pyramid(height):
     for i in range(height):
