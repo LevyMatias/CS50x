@@ -5,7 +5,7 @@ def print_pyramid(height):
     for i in range(height):
         spaces = " " * (height - i - 1)
         hashes = "#" * (i + 1)
-        print(spaces + hashes,"\n")
+        print(spaces + hashes)
 
 # main function
 def main():
