@@ -8,6 +8,10 @@ def print_pyramid(height):
         hashes = "#" * (i + 1)
         print(spaces + hashes)
 
+def print_inverted_pyramid(height):
+    for i in range(height):
+        
+
 def main():
     while True:
         height = get_int("Height: ")
