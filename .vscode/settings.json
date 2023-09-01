@@ -1,6 +1,9 @@
 {
-    "gitdoc.enabled": true,
+    "gitdoc.enabled": false,
     "files.associations": {
         "algorithm": "c"
+    },
+    "editor.codeActionsOnSave": {
+
     }
 }
