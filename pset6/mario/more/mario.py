@@ -6,7 +6,7 @@ def double_pyramid(height):
     for i in range(height):
         spaces = " " * (height - i - 1)
         hashes = "#" * (i + 1)
-        print(spaces + hashes + " " + hashes)
+        print(spaces + hashes + "  " + hashes)
 
 def main():
     while True:
