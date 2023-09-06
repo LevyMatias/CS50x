@@ -2,11 +2,9 @@
 #include <stdio.h>
 #include <math.h>
 
-// Codigo legal para carambolas
-
 int main(void)
 {
-        
+
     int c25 = 0;
     int c10 = 0;
     int c5 = 0;
@@ -20,7 +18,7 @@ int main(void)
     while (n < 0);
 
     int cents = round(n * 100);
-    
+
     c25 = cents / 25;  // Going to calculate cents divided for 25
     c10 = (cents - (c25 * 25)) / 10;  // Going to calculate cents divided for 10
     c5 = (cents - (c25 * 25) - (c10 * 10)) / 5; // Going to calculate cents divided for 5
